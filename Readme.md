@@ -27,3 +27,15 @@
 8. Give an example of how you would use multiple inheritance to model a real-world problem.
 9. How does multiple inheritance impact the encapsulation in OOP?
 10. What are the advantages and disadvantages of using multiple inheritance?
+
+## Here are some reference links related to the topics we discussed:
+
+1. Python Classes and Objects: [https://www.w3schools.com/python/python_classes.asp](https://www.w3schools.com/python/python_classes.asp)
+2. Python Constructors: [https://www.w3schools.com/python/python_constructors.asp](https://www.w3schools.com/python/python_constructors.asp)
+3. Python Inheritance: [https://www.w3schools.com/python/python_inheritance.asp](https://www.w3schools.com/python/python_inheritance.asp)
+4. Python Method Overriding: [https://www.w3schools.com/python/python_method_overriding.asp](https://www.w3schools.com/python/python_method_overriding.asp)
+5. Python Magic Methods: [https://www.geeksforgeeks.org/magic-methods-python/](https://www.geeksforgeeks.org/magic-methods-python/)
+6. Python Multiple Inheritance: [https://www.geeksforgeeks.org/multiple-inheritance-python/](https://www.geeksforgeeks.org/multiple-inheritance-python/)
+7. Mixins in Python: [https://en.wikipedia.org/wiki/Mixin](https://en.wikipedia.org/wiki/Mixin)
+8. Method Resolution Order (MRO) in Python: [https://www.python.org/download/releases/2.3/mro/](https://www.python.org/download/releases/2.3/mro/)
+9. Python super() function: [https://www.geeksforgeeks.org/super-in-python/](https://www.geeksforgeeks.org/super-in-python/)
