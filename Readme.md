@@ -69,3 +69,71 @@ sequenceDiagram
 -   The wrapper function performs some operation on the original function or method, such as logging, authentication, timing, etc.
 -   The modified function or method is returned by the decorator function.
 -   The modified function or method can be called like the original function or method, but now it also includes the added functionality provided by the decorator.
+
+# Multithreading
+
+-   It is a technique in computer science to execute multiple lines (threads) of execution concurrently
+-   A `thread` is a light weight, independent unit of execution
+-   Multiple threads can be part of the same process
+-   There are a lot of things (for example, memory) that shared by a thread with other threads, and hence they are light weight
+
+## Advantages:
+
+-   Improved performance
+-   Increased responsiveness
+-   Better utilization of resources
+-   Easy to implement
+
+## Differences between multithreading and multiprocessing
+
+-   Concurrent execution
+-   Resource sharing
+-   Communication
+-   Overhead
+
+# Assignments for Day 2
+
+## Assignment 1
+
+Create a CLI application in Python that allows the user to perform CRUD operations on a database. The application should have the following functionality:
+
+1. Connect to a database and create a table named "employees" with the following columns: "id" (integer), "name" (text), "age" (integer), and "salary" (real).
+
+    - The students should use the sqlite3 library to connect to a database.
+    - The students should use the appropriate SQL commands to create the "employees" table with the specified columns.
+
+2. Allow the user to insert, update, and delete data in the "employees" table.
+
+    - The students should provide a menu-based interface for the user to choose between the different CRUD operations.
+    - The students should use appropriate SQL commands for each CRUD operation (INSERT, UPDATE, DELETE).
+
+3. Allow the user to retrieve data from the "employees" table and display it in the console.
+
+    - The students should provide a menu-based interface for the user to choose between different retrieval options.
+    - The students should use the SELECT SQL command to retrieve data from the table and display it in the console.
+
+4. Close the database connection when the application exits.
+
+    - The students should properly close the database connection when the user chooses to exit the application.
+
+Some additional requirements for the students to complete the project:
+
+-   Students should validate the user inputs and handle the possible errors that may occur.
+-   Students should write the necessary comments for the code
+-   Provide the students with a sample database to work with and also include necessary instructions on how to connect to the database.
+
+## Assignment 2
+
+Create a Python program that utilizes multithreading to perform the following tasks:
+
+1. Read a large text file concurrently. The program should split the file into smaller chunks and each chunk should be read by a separate thread.
+2. Process the text concurrently. Each thread should process the text it read, to count the number of occurrences of a specific word.
+3. Write the processed data concurrently to a database. Each thread should write the number of occurrences of the specific word for the chunk of text it read, to the database.
+4. Implement a progress bar that updates in real-time to show the progress of the reading, processing, and writing tasks.
+
+Additional requirements:
+
+-   The students should use the threading library to create and manage threads.
+-   The students should handle exceptions and ensure that the program can gracefully handle any errors that may occur during the execution.
+-   The students should use a database such as MySQL or PostgreSQL to store the data
+-   The students should write the necessary comments for the code
