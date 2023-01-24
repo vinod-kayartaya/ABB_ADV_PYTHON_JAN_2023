@@ -39,3 +39,33 @@
 7. Mixins in Python: [https://en.wikipedia.org/wiki/Mixin](https://en.wikipedia.org/wiki/Mixin)
 8. Method Resolution Order (MRO) in Python: [https://www.python.org/download/releases/2.3/mro/](https://www.python.org/download/releases/2.3/mro/)
 9. Python super() function: [https://www.geeksforgeeks.org/super-in-python/](https://www.geeksforgeeks.org/super-in-python/)
+
+# Decorators in Python
+
+-   Decorators in Python are a way to modify or extend the behavior of a function or class without modifying its source code.
+-   They are typically implemented as a wrapper function that takes the original function or class as an input, performs some operation on it, and then returns the modified function or class.
+-   Decorators are applied to functions or methods using the "@" symbol followed by the decorator function name, immediately preceding the definition of the function or method to be decorated.
+-   They can take arguments to customize the behavior of the decorated function or method.
+-   Some examples of built-in decorators in Python include `@property`, `@classmethod`, `@staticmethod`, `@abstractmethod`.
+-   They can be used for adding functionality such as logging, authentication, timing, etc. to functions or methods without cluttering the code.
+
+```mermaid
+sequenceDiagram
+    participant Original Function/Method
+    participant Decorator Function
+    participant Wrapper Function
+    participant Modified Function/Method
+
+    Original Function/Method->Decorator Function: Pass as argument
+    Decorator Function->Wrapper Function: Defines a new function
+    Wrapper Function->Decorator Function: Perform operations
+    Decorator Function->Modified Function/Method: Returns modified function
+
+
+```
+
+-   The original function or method is defined and passed as an argument to the decorator function.
+-   The decorator function defines a new wrapper function that takes the same arguments as the original function or method.
+-   The wrapper function performs some operation on the original function or method, such as logging, authentication, timing, etc.
+-   The modified function or method is returned by the decorator function.
+-   The modified function or method can be called like the original function or method, but now it also includes the added functionality provided by the decorator.
