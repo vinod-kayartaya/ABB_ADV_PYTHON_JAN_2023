@@ -1,0 +1,73 @@
+http://localhost:2345/api/contacts
+
+### RFC 2616 format
+
+GET /api/contacts HTTP/1.1
+Host: localhost:2345
+Accept: text/plain
+
+###
+
+GET /api/contacts HTTP/1.1
+Host: localhost:2345
+Accept: application/json
+
+###
+
+GET /api/contacts/c649c54d-64c4-472d-8b41-a02f2946140c
+Host: localhost:2345
+Accept: application/json
+
+
+###
+
+GET /api/contacts/c649c54d-64c4-472d-8b41
+Host: localhost:2345
+Accept: application/json
+
+
+###
+
+POST /api/contacts
+Host: localhost:2345
+Accept: application/json
+Content-Type: application/json
+
+{
+  "firstname": "Vinod",
+  "lastname": "Kumar",
+  "email": "vinod@vinod.co",
+  "phone": "973-142-4784",
+  "gender": "Male",
+  "city": "Bangalore"
+}
+
+
+###
+
+POST /api/contacts
+Host: localhost:2345
+Accept: application/json
+Content-Type: application/json
+
+{
+    "firstname": "Naveen",
+    "lastname": "Kumar",
+    "email": "naveenkumar@xmpl.com",
+    "phone": "999-023-5678"
+}
+
+###
+
+PUT /api/contacts/27b6c2f8-8e2c-423f-9a25-54fb86513dc8
+Host: localhost:2345
+Accept: application/json
+Content-Type: application/json
+
+{
+    "email": "naveenkumar@example.com",
+    "firstname": "Naveen",
+    "lastname": "Kumar",
+    "phone": "999-023-5678",
+    "city": "Bangalore"
+}
