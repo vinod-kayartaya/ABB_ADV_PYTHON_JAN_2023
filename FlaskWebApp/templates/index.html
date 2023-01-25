@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Welcome to Flask</title>
+    <link href="https://bootswatch.com/5/yeti/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="alert alert-primary">
+    <div class="container">
+        <h1>{{ data['title'] }}</h1>
+    </div>
+</div>
+<div class="container" style="min-height: 600px">
+    <p>{{ data['subtitle'] }}</p>
+
+    <!-- menu -->
+    <div>
+        <a style="padding-left: 0" class="btn btn-link" href="/">Home</a>
+        <a class="btn btn-link" href="/product-list">Product list</a>
+        <a class="btn btn-link" href="/new-product">New product</a>
+        <a class="btn btn-link" href="/about">About us</a>
+    </div>
+
+    {% block dynamic_content %}
+    <h3>You are home!</h3>
+    <p class="lead">
+        Hello, and welcome to the product manager dashboard. Here you can perform the following operations:
+    </p>
+    <ul>
+        <li>View the list of all products</li>
+        <li>Add a new product</li>
+        <li>Delete an existing product</li>
+        <li>Modify the details of a product</li>
+        <li>View full details of a product</li>
+        <li>Contact the helpdesk</li>
+    </ul>
+    {% endblock %}
+
+</div>
+
+<div class="text-center">
+    &copy; 2023 - All rights reserved by <a href="https://vinod.co">KVinod Inc.</a>
+</div>
+</body>
+</html>
