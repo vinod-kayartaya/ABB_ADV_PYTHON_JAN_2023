@@ -2,6 +2,12 @@
 
 
 {% block dynamic_content %}
+
+{% if data['products'] | length == 0 %}
+<h3 class="text-danger">No products found in the database!</h3>
+{% endif %}
+
+{% if data['products'] | length > 0 %}
 <h3>Here is a list of all products we have</h3>
 
 <table class="table table-bordered table-hover table-striped">
@@ -9,7 +15,8 @@
     <tr>
         <th>Name</th>
         <th>Category</th>
-        <th>Price (INR)</th>
+        <th class="text-end">Price (INR)</th>
+        <th class="text-center">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -17,9 +24,17 @@
     <tr>
         <td>{{ p['name'] }}</td>
         <td>{{ p['category'] }}</td>
-        <td>{{ p['price'] }}</td>
+        <td class="text-end">{{ p['price'] }}</td>
+        <td class="text-center">
+            <a href="/delete-product/{{ p['id'] }}">
+                <i class="bi bi-trash3"></i>
+            </a>
+        </td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
+{% endif %}
+
+
 {% endblock %}

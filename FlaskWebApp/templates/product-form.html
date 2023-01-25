@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+
+{% block dynamic_content %}
+
+<h3>Add a new product details here:</h3>
+
+<div class="row">
+    <div class="col">
+        <form method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Product name</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" name="category">
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price (INR)</label>
+                <input type="number" class="form-control" id="price" name="price">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="col"></div>
+    <div class="col"></div>
+</div>
+
+
+{% endblock %}

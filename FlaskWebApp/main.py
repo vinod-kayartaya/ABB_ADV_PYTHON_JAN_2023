@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request
 
 # create an object of class Flask
 app = Flask('Demo Web Application')
@@ -45,6 +45,27 @@ def index():
 def product_list():
     data['products'] = products
     return render_template('product_list.html', data=data)
+
+
+@app.route('/delete-product/<int:product_id>')
+def delete_product(product_id):
+    global products
+    products = [p for p in products if p['id'] != product_id]
+    return redirect('/product-list')  # clientside redirection
+    # tells be browser to visit /product-list by adding a http response header called 'location'
+
+
+@app.route('/new-product', methods=['GET', 'POST'])
+def new_product():
+    if request.method == 'POST':
+        # access the data sent by the user, in the form of a form data
+        pr = dict(request.form)
+        global products
+        pr['id'] = max([p['id'] for p in products]) + 1 if len(products) > 0 else 1
+        products.append(pr)
+        return redirect('/product-list')
+
+    return render_template('product-form.html', data=data)
 
 
 if __name__ == '__main__':
