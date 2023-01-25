@@ -137,3 +137,32 @@ Additional requirements:
 -   The students should handle exceptions and ensure that the program can gracefully handle any errors that may occur during the execution.
 -   The students should use a database such as MySQL or PostgreSQL to store the data
 -   The students should write the necessary comments for the code
+
+# Web services
+
+What is a web service?
+
+-   A service offered on the web
+-   A method of communication between two electronic devices over a web network
+-   Uses the web protocol (HTTP)
+-   Allows communication between applications written in different languages/platforms
+    -   For example, a Java app can communicate with a PHP application
+
+Types:
+
+1. SOAP (Big) web services
+2. RESTful web services
+    - Based on the work by Roy Fielding (who is the co-creator of HTTP protocol)
+    - 6 constraints
+        1. Uniform interface
+            - http://example.com/api/products --> GET, POST
+            - http://example.com/api/products/23 --> GET, PUT, DELETE
+        1. Client/Server
+        1. Stateless
+        1. Cacheable
+        1. Layered system
+        1. Code on demand (Optional)
+    - Can be easily implemented by using frameworks
+        - Java --> Springboot, JAX-RS, Resteasy, Restlets, Apache Axis
+        - Python --> Flask, Bottle, DJango
+        - .Net --> Web api
